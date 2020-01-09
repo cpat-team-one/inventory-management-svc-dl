@@ -127,13 +127,11 @@ public class ResettableHttpServletRequest extends HttpServletRequestWrapper {
             inputStream.close();
         }
 
-        @Override
-        public void mark(int i) {
+        public synchronized void mark(int i) {
             inputStream.mark(i);
         }
 
-        @Override
-        public void reset() throws IOException {
+        public synchronized void reset() throws IOException {
             inputStream.reset();
         }
 
