@@ -43,9 +43,9 @@ spec:
           env:
             - name: CLOUDANT_CONFIG
               valueFrom:
-              secretKeyRef:
-                name: {{ .Values.cloudantBinding | quote }}
-                key: binding
+                secretKeyRef:
+                  name: {{ .Values.cloudantBinding | quote }}
+                  key: binding
             - name: DATABASE_NAME
               value: {{ .Values.databaseName | quote }}
             - name: IMAGE_NAME
