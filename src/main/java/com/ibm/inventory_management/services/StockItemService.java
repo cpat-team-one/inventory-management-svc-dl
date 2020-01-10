@@ -32,13 +32,13 @@ public class StockItemService implements StockItemApi {
     @Override
     public List<StockItem> listStockItems() {
 
-        
-            return db.getAllDocsRequestBuilder()
-                    .includeDocs(true)
-                    .build()
-                    .getResponse()
-                    .getDocsAs(StockItem.class);
-
+        try {
+            return db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(StockItem.class);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-    }
+            return null;
+        }
 }
+
