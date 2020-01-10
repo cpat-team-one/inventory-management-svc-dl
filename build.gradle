@@ -78,6 +78,7 @@ apply plugin: 'idea'
 
 // apply from:   'gradle/build-war.gradle'
 apply from:   'gradle/build-jar.gradle'
+apply from:   'gradle/build-cloudant.gradle'
 apply from:   'gradle/build-springboot.gradle'
 apply from:   'gradle/build-junit5.gradle'
 apply from:   'gradle/build-testlogger.gradle'
